@@ -1,7 +1,9 @@
 import pyautogui
+import time
 import pytesseract
 import pygetwindow as gw
 from PIL import Image
+
 
 # Tesseract Path
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
@@ -9,23 +11,17 @@ pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tessera
 
 def take_screenshot():
 
-    try:
-        chrome = gw.getWindowsWithTitle("LeetCode")[0]
+    print("Screenshot will be taken in 10 seconds...")
+    
+    for i in range(10, 0, -1):
+        print(i)
+        time.sleep(1)
 
-        left = chrome.left
-        top = chrome.top
-        width = chrome.width
-        height = chrome.height
-
-        img = pyautogui.screenshot(
-            region=(left, top, width, height)
-        )
-
-    except:
-        # Fallback
-        img = pyautogui.screenshot()
+    img = pyautogui.screenshot()
 
     img.save("screen.png")
+
+    print("Screenshot captured successfully!")
 
 
 def extract_text():
