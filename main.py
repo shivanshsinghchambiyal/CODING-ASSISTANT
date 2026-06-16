@@ -1,7 +1,6 @@
 import pyautogui
 import time
 import pytesseract
-import pygetwindow as gw
 from PIL import Image
 
 
