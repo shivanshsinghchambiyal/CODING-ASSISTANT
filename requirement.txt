@@ -9,8 +9,5 @@ Python wrapper for Tesseract OCR. It extracts text from screenshots, allowing th
 ### Pillow (PIL)
 Used for image processing and handling screenshot files before OCR extraction.
 
-### PyGetWindow
-Used to detect and access specific application windows (such as LeetCode in Chrome), making screenshot capture more accurate.
-
 ### Tesseract OCR
 An open-source Optical Character Recognition engine used to convert images into machine-readable text.
